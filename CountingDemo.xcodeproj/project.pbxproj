@@ -13,6 +13,9 @@
 		AAF911041EE5B970001E98E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF911021EE5B970001E98E0 /* Main.storyboard */; };
 		AAF911061EE5B970001E98E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF911051EE5B970001E98E0 /* Assets.xcassets */; };
 		AAF911091EE5B970001E98E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF911071EE5B970001E98E0 /* LaunchScreen.storyboard */; };
+		AAF911181EE5BB4F001E98E0 /* UIView+GetCurrentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF911171EE5BB4F001E98E0 /* UIView+GetCurrentVC.m */; };
+		AAF9111E1EE5BF2B001E98E0 /* UIButton+AdCounting.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9111D1EE5BF2B001E98E0 /* UIButton+AdCounting.m */; };
+		AAF911211EE5C06B001E98E0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF911201EE5C06B001E98E0 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		AAF911051EE5B970001E98E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAF911081EE5B970001E98E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAF9110A1EE5B970001E98E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF911161EE5BB4F001E98E0 /* UIView+GetCurrentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GetCurrentVC.h"; sourceTree = "<group>"; };
+		AAF911171EE5BB4F001E98E0 /* UIView+GetCurrentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GetCurrentVC.m"; sourceTree = "<group>"; };
+		AAF9111C1EE5BF2B001E98E0 /* UIButton+AdCounting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AdCounting.h"; sourceTree = "<group>"; };
+		AAF9111D1EE5BF2B001E98E0 /* UIButton+AdCounting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AdCounting.m"; sourceTree = "<group>"; };
+		AAF9111F1EE5C06B001E98E0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		AAF911201EE5C06B001E98E0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,12 @@
 				AAF910FD1EE5B970001E98E0 /* AppDelegate.m */,
 				AAF910FF1EE5B970001E98E0 /* ViewController.h */,
 				AAF911001EE5B970001E98E0 /* ViewController.m */,
+				AAF9111F1EE5C06B001E98E0 /* TestViewController.h */,
+				AAF911201EE5C06B001E98E0 /* TestViewController.m */,
+				AAF911161EE5BB4F001E98E0 /* UIView+GetCurrentVC.h */,
+				AAF911171EE5BB4F001E98E0 /* UIView+GetCurrentVC.m */,
+				AAF9111C1EE5BF2B001E98E0 /* UIButton+AdCounting.h */,
+				AAF9111D1EE5BF2B001E98E0 /* UIButton+AdCounting.m */,
 				AAF911021EE5B970001E98E0 /* Main.storyboard */,
 				AAF911051EE5B970001E98E0 /* Assets.xcassets */,
 				AAF911071EE5B970001E98E0 /* LaunchScreen.storyboard */,
@@ -150,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF9111E1EE5BF2B001E98E0 /* UIButton+AdCounting.m in Sources */,
+				AAF911181EE5BB4F001E98E0 /* UIView+GetCurrentVC.m in Sources */,
 				AAF911011EE5B970001E98E0 /* ViewController.m in Sources */,
 				AAF910FE1EE5B970001E98E0 /* AppDelegate.m in Sources */,
 				AAF910FB1EE5B970001E98E0 /* main.m in Sources */,
+				AAF911211EE5C06B001E98E0 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
