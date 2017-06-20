@@ -10,52 +10,6 @@
 
 @implementation UIView (GetCurrentVC)
 
-//-  (UIViewController*)getCurrentVC {
-//    
-//    UIViewController*result =nil;
-//    
-//    UIWindow* window = [[UIApplication sharedApplication]keyWindow];
-//    
-//    if(window.windowLevel!=UIWindowLevelNormal)
-//        
-//    {
-//        
-//        NSArray*windows = [[UIApplication sharedApplication]windows];
-//        
-//        for(UIWindow* tmpWin in windows)
-//            
-//        {
-//            
-//            if(tmpWin.windowLevel==UIWindowLevelNormal)
-//                
-//            {
-//                
-//                window = tmpWin;
-//                
-//                break;
-//                
-//            }
-//            
-//        }
-//        
-//    }
-//    
-//    UIView*frontView = [[window subviews]objectAtIndex:0];
-//    
-//    id nextResponder = [frontView nextResponder];
-//    
-//    if([nextResponder isKindOfClass:[UIViewController class]])
-//        
-//        result = nextResponder;
-//    
-//    else
-//        
-//        result = window.rootViewController;
-//    
-//    return result;
-//    
-//}
-
 - (UIViewController *)getCurrentVC {
     UIViewController * rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
     if ([rootVC isKindOfClass:[UITabBarController class]]) {
@@ -71,7 +25,6 @@
         UIViewController * lastVC = [navigationVC.viewControllers lastObject];
         return lastVC;
     }
-    
     return rootVC;
 }
 

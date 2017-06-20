@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "TestViewController.h"
 @interface ViewController ()
 
 @end
@@ -16,15 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.title = @"heihei";
 }
 
-
 - (IBAction)buttonEvent:(UIButton *)sender {
-    
-    
-    
+    TestViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TestViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

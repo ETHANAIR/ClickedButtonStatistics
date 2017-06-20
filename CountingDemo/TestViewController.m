@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.title = @"wawa";
 }
 
@@ -25,6 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)buttonEvent:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)secondEvent:(UIButton *)sender {
 }
 
 /*

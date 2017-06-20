@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ngQ-wQ-Bif">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ngQ-wQ-Bif">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,17 +21,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeB-ct-Vpj">
-                                <rect key="frame" x="164" y="310" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeB-ct-Vpj">
+                                <rect key="frame" x="169.5" y="318.5" width="35" height="30"/>
+                                <state key="normal" title="Push"/>
                                 <connections>
                                     <action selector="buttonEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="diB-nY-1NV"/>
-                                    <segue destination="0FF-rS-HIm" kind="push" id="8o0-2j-4rX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BeB-ct-Vpj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0g9-bb-i4v"/>
+                            <constraint firstItem="BeB-ct-Vpj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6oN-Sh-fcR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tuU-rL-0Od"/>
                 </viewController>
@@ -42,7 +44,7 @@
         <!--Test View Controller-->
         <scene sceneID="OxI-fv-3fQ">
             <objects>
-                <viewController id="0FF-rS-HIm" customClass="TestViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestViewController" id="0FF-rS-HIm" customClass="TestViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yck-So-Sgy"/>
                         <viewControllerLayoutGuide type="bottom" id="RRp-td-y8d"/>
@@ -51,22 +53,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVE-c1-qjg">
-                                <rect key="frame" x="104" y="271" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVE-c1-qjg">
+                                <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
+                                <state key="normal" title="Test"/>
                                 <connections>
                                     <action selector="buttonEvent:" destination="0FF-rS-HIm" eventType="touchUpInside" id="WC7-sT-ixF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXH-7E-zzs">
+                                <rect key="frame" x="160" y="364" width="54" height="30"/>
+                                <state key="normal" title="I'm Title"/>
+                                <connections>
+                                    <action selector="secondEvent:" destination="0FF-rS-HIm" eventType="touchUpInside" id="r5k-oj-itO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GXH-7E-zzs" firstAttribute="centerX" secondItem="OVE-c1-qjg" secondAttribute="centerX" id="4KM-pk-w7L"/>
+                            <constraint firstItem="GXH-7E-zzs" firstAttribute="top" secondItem="OVE-c1-qjg" secondAttribute="bottom" constant="15.5" id="dVB-H1-1yD"/>
+                            <constraint firstItem="OVE-c1-qjg" firstAttribute="centerY" secondItem="UCa-Is-4AP" secondAttribute="centerY" id="lpf-MF-E5b"/>
+                            <constraint firstItem="OVE-c1-qjg" firstAttribute="centerX" secondItem="UCa-Is-4AP" secondAttribute="centerX" id="o2o-Df-dxu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="niw-hp-Ojg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brc-6L-5h8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1639.2" y="39.130434782608695"/>
+            <point key="canvasLocation" x="1849" y="38"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yy2-jh-kBk">

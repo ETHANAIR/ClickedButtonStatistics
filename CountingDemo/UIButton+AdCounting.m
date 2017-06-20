@@ -13,7 +13,6 @@
 @implementation UIButton (AdCounting)
 
 + (void)load {
-    // 交换方法实现
     Method sendAction = class_getInstanceMethod([self class], @selector(sendAction:to:forEvent:));
     Method ea_SendAction = class_getInstanceMethod([self class], @selector(ea_sendAction:to:forEvent:));
     method_exchangeImplementations(sendAction, ea_SendAction);
@@ -24,9 +23,13 @@
 }
 
 - (void)ea_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
-    
+    [self saveCountingData];
     [self ea_sendAction:action to:target forEvent:event];
-    NSLog(@"%@",[self.getCurrentVC title]);
+}
+
+- (void)saveCountingData{
+    //TODO: save your data to cache or database even post a request to your web service.
+    NSLog(@"%@ viewController is %@",self.currentTitle, [self.getCurrentVC class]);
 }
 
 @end
